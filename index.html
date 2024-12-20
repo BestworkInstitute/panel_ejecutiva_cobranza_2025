@@ -54,17 +54,17 @@
             cursor: pointer;
         }
 
-        /* Colores personalizados */
-        .messagebird { background-color: blue; }
-        .serpo { background-color: rgb(204, 14, 46); color: white; }
-        .webmail { background-color: orange; }
-        .reloj-control { background-color: rgb(30, 142, 191); }
-        .envio-masivo { background-color: purple; }
-        .portal-llamados { background-color: rgb(215, 213, 75); }
-        .formulario-casos { background-color: darkorange; }
-        .tabla-avance { background-color: green; }
-        .masivo { background-color: rgb(111, 236, 111); }
-        .comprobante { background-color: rgb(223, 68, 68); }
+        /* Colores corregidos según orden de links */
+        .reloj-control { background-color: rgb(30, 142, 191); } /* Reloj Control */
+        .messagebird { background-color: blue; } /* Messagebird */
+        .portal-llamados { background-color: rgb(215, 213, 75); } /* Portal Llamados */
+        .serpo { background-color: rgb(204, 14, 46); } /* Serpo */
+        .comprobante { background-color: rgb(223, 68, 68); } /* Comprobante de Pago */
+        .formulario-casos { background-color: darkorange; } /* Formulario de Casos */
+        .tabla-avance { background-color: green; } /* Tabla Avance */
+        .webmail { background-color: orange; } /* Webmail */
+        .envio-masivo { background-color: purple; } /* Sistema de Envío Masivo */
+        .masivo { background-color: rgb(111, 236, 111); } /* Tablas Envío Masivo */
 
         button:hover {
             filter: brightness(90%);
@@ -85,12 +85,12 @@
             <button class="messagebird" onclick="openLink('https://inbox.messagebird.com/workspace/')">MESSAGEBIRD</button>
             <button class="portal-llamados" onclick="openLink('https://www.prolaborem.cl/gestionempresa/txpCobranzasCallNew/index.php')">PORTAL LLAMADOS COBRANZA</button>
             <button class="serpo" onclick="openLink('https://ventab.serpo.cl/inicio/bestwork')">SERPO</button>
-            <butt class="comprobante" onclick="openLink('https://forms.gle/Fk4ze2wKaHSSnj4s5')">COMPROBANTE DE PAGO</button>
+            <button class="comprobante" onclick="openLink('https://forms.gle/Fk4ze2wKaHSSnj4s5')">COMPROBANTE DE PAGO</button>
             <button class="formulario-casos" onclick="openLink('https://docs.google.com/forms/d/e/1FAIpQLSesFiwsz1oliP4ssdyt_NATzRNEHpRGpwqEw3oV3fUnzZtOEg/viewform?pli=1')">FORMULARIO DE CASOS</button>
             <button class="tabla-avance" onclick="openLink('https://docs.google.com/spreadsheets/d/1h5o6IsqXCkqpRb6Rc-npeTmwSYJEWzLU/edit?rtpof=true&sd=true')">TABLA AVANCE</button>
-            <buttonon class="webmail" onclick="openLink('https://webmail.bestwork.cl/')">WEBMAIL</button>
-            <button class="masivo" onclick="openLink('https://docs.google.com/spreadsheets/d/1eOl7_7pqMns6HMmXSTGZsdG-lh8POHFxIlv3R2teAYM/edit?gid=525436215#gid=525436215')">TABLAS ENVÍO MASIVO</button>
+            <button class="webmail" onclick="openLink('https://webmail.bestwork.cl/')">WEBMAIL</button>
             <button class="envio-masivo" onclick="openLink('https://mensaje-cobranza.vercel.app/')">SISTEMA DE ENVÍO MASIVO</button>
+            <button class="masivo" onclick="openLink('https://docs.google.com/spreadsheets/d/1eOl7_7pqMns6HMmXSTGZsdG-lh8POHFxIlv3R2teAYM/edit?gid=525436215#gid=525436215')">TABLAS ENVÍO MASIVO</button>
         </div>
     </div>
 
