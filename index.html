@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel Ejecutiva Cobranza</title>
   <style>
-    /* (Estilos existentes intactos) */
     body, html {
       font-family: Arial, sans-serif;
       background-color: #f7f8fc;
@@ -119,11 +118,20 @@
     <h1>Panel Ejecutiva Cobranza</h1>
 
     <div class="buttons-grid">
-      <!-- botones existentes -->
-      <!-- OMITIDOS PARA AHORRAR ESPACIO -->
+      <button class="blue-button" onclick="openLink('https://trabajador.relojcontrol.com/')">RELOJ CONTROL</button>    
+      <button class="blue-button" onclick="openLink('https://inbox.messagebird.com/workspace/')">MESSAGEBIRD</button>
+      <button class="orange-button" onclick="openLink('https://www.prolaborem.cl/gestionempresa/txpCobranzasCallNew/index.php')">PORTAL LLAMADOS COBRANZA</button>
+      <button class="orange-button" onclick="openLink('https://ventab.serpo.cl/inicio/bestwork')">SERPO</button>
+      <button class="blue-button" onclick="openLink('https://forms.gle/Fk4ze2wKaHSSnj4s5')">COMPROBANTE DE PAGO</button>
+      <button class="blue-button" onclick="openLink('https://docs.google.com/forms/d/e/1FAIpQLSesFiwsz1oliP4ssdyt_NATzRNEHpRGpwqEw3oV3fUnzZtOEg/viewform?pli=1')">FORMULARIO DE CASOS</button>
+      <button class="orange-button" onclick="openLink('https://docs.google.com/spreadsheets/d/1h5o6IsqXCkqpRb6Rc-npeTmwSYJEWzLU/edit?rtpof=true&sd=true')">TABLA AVANCE</button>
+      <button class="orange-button" onclick="openLink('https://webmail.bestwork.cl/')">WEBMAIL</button>
+      <button class="blue-button" onclick="openLink('https://mensaje-cobranza.vercel.app/')">SISTEMA DE ENVÍO MASIVO</button>
+      <button class="blue-button" onclick="openLink('https://docs.google.com/spreadsheets/d/1eOl7_7pqMns6HMmXSTGZsdG-lh8POHFxIlv3R2teAYM/edit?gid=525436215#gid=525436215')">TABLAS ENVÍO MASIVO</button>
+      <button class="blue-button" onclick="openLink('https://onboarding-fidelizacion-bestworks-projects.vercel.app/')">BIENVENIDA Y ONBOARDING</button>
+      <button class="orange-button" onclick="openLink('https://datos-alumnos.vercel.app/')">DATOS ALUMNOS</button>
     </div>
 
-    <!-- NUEVO FORMULARIO -->
     <div class="form-section">
       <h2>Solicitud de Tarea</h2>
       <form id="tareaForm">
@@ -131,7 +139,7 @@
         <select id="tarea" name="TAREA" required>
           <option value="">-- Elegir --</option>
           <option value="HABILITAR CAMPUS">HABILITAR CAMPUS (YA PAGÓ DEUDA)</option>
-          <option value="HABILITAR VIDEOS">HABILITAR VIDEOS ANTIGUOS</option>
+          <option value="HABILITAR VIDEOS">HABILITAR VIDEOS CAMPUS</option>
         </select>
 
         <label for="rut">RUT del Alumno:</label>
@@ -168,14 +176,13 @@
       const nombreEjecutiva = ejecutivaSelect.options[ejecutivaSelect.selectedIndex].text;
       const numeroEjecutiva = ejecutivaSelect.value;
 
-      const responseMessage = document.getElementById('responseMessage');
-      responseMessage.textContent = "";
-      responseMessage.className = "";
-
-      // Variables fijas del flow
       const nombre = "Ejecutiva Cobranza";
       const numeroJP = "56990511910";
       const numeroSabri = "56944130925";
+
+      const responseMessage = document.getElementById('responseMessage');
+      responseMessage.textContent = "";
+      responseMessage.className = "";
 
       try {
         const res = await fetch('https://flows.messagebird.com/flows/4ddcb5aa-c50a-4608-9126-7e2e4f54c5e4/invoke', {
@@ -211,4 +218,3 @@
   </script>
 </body>
 </html>
-
